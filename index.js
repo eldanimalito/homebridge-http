@@ -241,13 +241,13 @@ var pollingtoevent = require('polling-to-event');
 				case "yes":					
 					this.switchService
 					.getCharacteristic(Characteristic.On)
-					//.on('get', this.getPowerState.bind(this))
+					.on('get', this.getPowerState.bind(this))
 					//.on('set', this.setPowerState.bind(this));						
 					break;
 				case "realtime":				
 					this.switchService
 					.getCharacteristic(Characteristic.On)
-					//.on('get', function(callback) {callback(null, that.state)})
+					.on('get', function(callback) {callback(null, that.state)})
 					//.on('set', this.setPowerState.bind(this));
 					break;
 				default	:	
@@ -264,18 +264,18 @@ var pollingtoevent = require('polling-to-event');
 				this.lightbulbService
 				.getCharacteristic(Characteristic.On)
 				.on('get', this.getPowerState.bind(this))
-				.on('set', this.setPowerState.bind(this));
+				//.on('set', this.setPowerState.bind(this));
 				break;
 			case "realtime":
 				this.lightbulbService
 				.getCharacteristic(Characteristic.On)
 				.on('get', function(callback) {callback(null, that.state)})
-				.on('set', this.setPowerState.bind(this));
+				//.on('set', this.setPowerState.bind(this));
 				break;
 			default:		
 				this.lightbulbService
 				.getCharacteristic(Characteristic.On)	
-				.on('set', this.setPowerState.bind(this));
+				//.on('set', this.setPowerState.bind(this));
 				break;
 			}
 			// Brightness Polling 
